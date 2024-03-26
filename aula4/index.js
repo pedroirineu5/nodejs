@@ -4,14 +4,16 @@ const path = require('path')
 async function lerDiretorio(rootDir){
     rootDir = rootDir || path.resolve(__dirname)
     const files = await fs.readdir(rootDir)
-    walk(files)
+    walk(files, rootDir)
 }
 
-function walk(files){
+async function walk(files, rootDir){
     for(let file of files){
-        console.log(file)
+        const fileFullPath = path.resolve(rootDir, file)
+        const stats = await fs.stat(fileFullPath)
+        console.log(file, stats.isDirectory())
     }
 }
 
-lerDiretorio()// tem um mini delay
-console.log('fasdfdas')
+lerDiretorio('../')// tem um mini delay
+console.log('roda primeiro, porque é mais rápido que a funcao async')
