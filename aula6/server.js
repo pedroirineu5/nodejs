@@ -5,9 +5,12 @@ const app = express()
 
 // criando as rotas do sistema, com o método de requisição(REQUEST) e resposta(RESPONSE)
 app.get('/', (req,res)=>{
-    res.send('Hello world!') 
+    res.send('Hello world!') // colocando conteudo através da resposta de após o método GET de chamar a raiz do sistema
 })
 
+app.get('/sobre', (req,res)=>{
+    res.send('This is kinda hot tho.')
+})
 
 
 // isso aqui é para não ter problemas com a porta na hora de rodar o servidor
