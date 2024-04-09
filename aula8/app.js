@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 
+
 app.get('/',(req,res)=>{
     res.send(`
     <form action="/" method="POST">
@@ -11,11 +12,11 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/',(req,res) => {
-    res.send('formulário enviado')
+    res.send('penis')
 })
 
 app.get('/tests',(req,res) => {
-    console.log(req.params)
+    console.log(req.params) // isso vai logar um objeto vazio
     res.send('oi')
 })
 
