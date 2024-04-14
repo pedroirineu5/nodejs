@@ -24,3 +24,4 @@ app.listen(3000,()=>{
 })
 
 // nessa aula vou aprender a como usar o nodemon, para não ficar ligando e desligando o servidor o tempo todo
+// literalmente, só baixar ele com "npm install nodemon --save-dev" é uma dependencia de desenvolvimento, então deixa ela por lá mesmo.
