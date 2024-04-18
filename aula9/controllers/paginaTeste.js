@@ -1,3 +1,12 @@
-// exports.paginaTeste = (req,res)=>{
-//     res.send('página de testes caralho, mas agora usando routes e controllers')
-// }
+exports.paginaTeste = (req,res)=>{
+   res.send(`
+   <form action="/" method="POST">
+   nome: <input type="text" name="nome">
+   <button>Enviar</button>
+   </form>
+   `)
+}
+
+exports.testePost = (req,res)=>{
+    res.send('POST CONCLUÍDO')
+}
