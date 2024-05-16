@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express()
 const routes = require('./routes')
+const{middlewareGlobal, middlewareFudido}  = require('./src/middlewares/middleware')
 
 app.use(
     express.urlencoded(
         {extended: true}
     )
 )
+
 // para rodar o conteúdo estático
 app.use(express.static('./public'))
 
@@ -17,6 +19,9 @@ app.set('views', './src/views')
 app.set('view engine', 'ejs')
 
 
+//Aqui todas as rotas, todas as requisições, vão passar por um middleware
+app.use(middlewareGlobal)
+app.use(middlewareFudido)
 // literalmente um comando para pedir ao express para usar as minhas rotas criadas
 app.use(routes)
 

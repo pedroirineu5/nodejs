@@ -1,5 +1,6 @@
-exports.paginaInicial = (req,res, next)=>{
+exports.paginaInicial = (req,res)=>{
     res.render('index')
+    return
 }
 
 exports.testandoPost = (req,res)=>{

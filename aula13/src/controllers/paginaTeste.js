@@ -8,5 +8,6 @@ exports.paginaTeste = (req,res)=>{
 }
 
 exports.testePost = (req,res)=>{
-    res.send('POST CONCLUÍDO')
+    res.send(req.body)
+    return
 }
