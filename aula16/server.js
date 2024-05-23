@@ -24,7 +24,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 const configSession = session({
   secret: 'mgklfdsgmdflskmklmklbvcxmbklvcx',
-  store: new MongoStore.create({ mongoUrl:process.env.CONNECTIONSTRING}),
+  store: MongoStore.create({ mongoUrl:process.env.CONNECTIONSTRING}),
   resave: false,
   saveUninitialized: false,
   cookie: {
